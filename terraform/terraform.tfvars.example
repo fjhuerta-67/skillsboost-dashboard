@@ -1,0 +1,39 @@
+# ============================================================================
+# Plantilla de Variables Terraform — SkillsBoost Dashboard (Cloud Run + BigQuery)
+# Copia este archivo como 'terraform.tfvars' o genera uno guiado ejecutando:
+#   npm run deploy:wizard
+# ============================================================================
+
+project_id                 = "tu-proyecto-gcp"
+region                     = "us-central1"
+service_name               = "skillsboost-dashboard"
+storage_backend            = "bigquery"
+bq_dataset_id              = "skillsboost_analytics"
+bq_deletion_protection     = true
+create_gcs_bucket          = true
+auth_mode                  = "iam_private" # Opciones: "iam_private" | "basic_auth" | "public_iap"
+use_vertex_ai              = true
+gemini_model               = "gemini-2.5-flash"
+skills_organization_slug   = "tu-organizacion-slug"
+skills_contracted_licenses = 500
+
+# Marca en true después de subir las claves a Secret Manager (el wizard lo hace automático)
+has_skills_secrets_versions   = true
+has_gemini_secret_version     = false
+has_basic_auth_secret_version = false
+
+# Sincronización nocturna automática (Cloud Scheduler -> Cloud Run Job)
+enable_scheduled_sync = true
+sync_cron_schedule    = "0 2 * * *"
+sync_time_zone        = "UTC"
+sync_lookback_days    = 0
+
+min_instances = 0
+max_instances = 3
+memory_limit  = "1Gi"
+cpu_limit     = "1"
+
+labels = {
+  environment = "production"
+  cost_center = "talent-development"
+}

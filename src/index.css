@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --google-blue: #1a73e8;
+    --google-blue-bright: #4285f4;
+    --google-blue-hover: #1557b0;
+    --google-blue-tint: #e8f0fe;
+    --google-red: #ea4335;
+    --google-red-tint: #fce8e6;
+    --google-yellow: #fbbc04;
+    --google-yellow-tint: #fef7e0;
+    --google-green: #34a853;
+    --google-green-tint: #e6f4ea;
+    --google-surface: #ffffff;
+    --google-bg: #f8fafd;
+    --google-border: #dadce0;
+    --google-text-primary: #202124;
+    --google-text-secondary: #5f6368;
+  }
+
+  body {
+    font-family: 'Google Sans', 'Plus Jakarta Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #f8fafd;
+    color: #202124;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Google Sans', 'Plus Jakarta Sans', 'Roboto', sans-serif;
+    color: #202124;
+  }
+}
+
+/* Clean Google Material light scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f3f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #bdc1c6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa0a6;
+}
+
+/* Colorful subtle Google ambient background */
+.google-glow {
+  background-color: #f8fafd;
+  background-image:
+    radial-gradient(circle at 12% 0%, rgba(66, 133, 244, 0.09) 0%, transparent 38%),
+    radial-gradient(circle at 48% 0%, rgba(234, 67, 53, 0.06) 0%, transparent 34%),
+    radial-gradient(circle at 75% 0%, rgba(251, 188, 4, 0.08) 0%, transparent 34%),
+    radial-gradient(circle at 95% 4%, rgba(52, 168, 83, 0.08) 0%, transparent 38%);
+}
+
+/* Crisp White Google Material 3 Card */
+.google-card {
+  background: #ffffff;
+  border: 1px solid #e0e4eb;
+  border-radius: 16px;
+  box-shadow:
+    0 1px 2px 0 rgba(60, 64, 67, 0.06),
+    0 2px 6px 2px rgba(60, 64, 67, 0.03);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.google-card:hover {
+  border-color: #c6d2e3;
+  box-shadow:
+    0 1px 3px 0 rgba(60, 64, 67, 0.1),
+    0 4px 12px 3px rgba(60, 64, 67, 0.05);
+}
+
+.google-rainbow-border {
+  border-image: linear-gradient(to right, #4285f4, #ea4335, #fbbc04, #34a853) 1;
+}
+
+.google-rainbow-bar {
+  background: linear-gradient(
+    90deg,
+    #4285f4 0%,
+    #4285f4 25%,
+    #ea4335 25%,
+    #ea4335 50%,
+    #fbbc04 50%,
+    #fbbc04 75%,
+    #34a853 75%,
+    #34a853 100%
+  );
+}
+
+.google-rainbow-gradient {
+  background: linear-gradient(90deg, #4285f4 0%, #ea4335 35%, #fbbc04 68%, #34a853 100%);
+}

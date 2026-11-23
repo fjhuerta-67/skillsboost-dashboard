@@ -1,0 +1,29 @@
+node_modules/
+dist/
+.data/
+releases/
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+.DS_Store
+.vscode/
+.idea/
+coverage/
+
+# Confidential / local reference PDFs & key material
+docs/*.pdf
+*.pem
+*.key
+*credentials*.json
+*service-account*.json
+
+# Terraform state & sensitive local vars
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.tfvars
+!terraform/terraform.tfvars.example
+terraform/*.tfvars.json
+terraform/tfplan
